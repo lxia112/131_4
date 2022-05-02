@@ -1627,7 +1627,7 @@ document to reproduce your results.</em></p>
 recipe you used in Homework 3.</p>
 <div id="loading-packages" class="section level3">
 <h3>Loading Packages</h3>
-<pre class="r"><code>set.seed(123)
+<pre class="r"><code>set.seed(131)
 
 library(tidymodels)
 library(tidyverse)
@@ -1811,26 +1811,26 @@ standard error.)</em></p>
 <pre><code>## # A tibble: 2 x 6
 ##   .metric  .estimator  mean     n std_err .config             
 ##   &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               
-## 1 accuracy binary     0.817    10  0.0141 Preprocessor1_Model1
-## 2 roc_auc  binary     0.850    10  0.0141 Preprocessor1_Model1</code></pre>
-<p>The logistic regression has an accuracy of 0.824 and a standard error
-of 0.0157.</p>
+## 1 accuracy binary     0.809    10  0.0146 Preprocessor1_Model1
+## 2 roc_auc  binary     0.869    10  0.0118 Preprocessor1_Model1</code></pre>
+<p>The logistic regression has an accuracy of 0.8089350 and a standard
+error of 0.0145.</p>
 <pre class="r"><code>collect_metrics(lda_fit)</code></pre>
 <pre><code>## # A tibble: 2 x 6
 ##   .metric  .estimator  mean     n std_err .config             
 ##   &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               
-## 1 accuracy binary     0.798    10  0.0111 Preprocessor1_Model1
-## 2 roc_auc  binary     0.851    10  0.0141 Preprocessor1_Model1</code></pre>
-<p>The logistic regression has an accuracy of 0.804 and a standard error
-of 0.0192.</p>
+## 1 accuracy binary     0.803    10  0.0129 Preprocessor1_Model1
+## 2 roc_auc  binary     0.868    10  0.0127 Preprocessor1_Model1</code></pre>
+<p>The logistic regression has an accuracy of 0.7995136 and a standard
+error of 0.01826695.</p>
 <pre class="r"><code>collect_metrics(qda_fit)</code></pre>
 <pre><code>## # A tibble: 2 x 6
 ##   .metric  .estimator  mean     n std_err .config             
 ##   &lt;chr&gt;    &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               
-## 1 accuracy binary     0.774    10  0.0104 Preprocessor1_Model1
-## 2 roc_auc  binary     0.839    10  0.0157 Preprocessor1_Model1</code></pre>
-<p>The logistic regression has an accuracy of 0.766 and a standard error
-of 0.0209.</p>
+## 1 accuracy binary     0.783    10  0.0144 Preprocessor1_Model1
+## 2 roc_auc  binary     0.860    10  0.0155 Preprocessor1_Model1</code></pre>
+<p>The logistic regression has an accuracy of 0.7850486 and a standard
+error of 0.01310639.</p>
 <p>So, the logistic regression model performed the best because it had
 the highest accuracy and smallest standard error.</p>
 </div>
@@ -1858,15 +1858,15 @@ final_fit</code></pre>
 ## 
 ## Coefficients:
 ##     (Intercept)              age           sib_sp            parch  
-##       -4.479635         0.065303         0.591529         0.131192  
+##      -4.8485149        0.0638445        0.4867294        0.2053968  
 ##            fare        pclass_X2        pclass_X3         sex_male  
-##       -0.007895         0.932520         2.216490         2.530135  
+##       0.0037451        1.3341760        2.5443384        2.7415709  
 ## sex_male_x_fare       fare_x_age  
-##        0.014305        -0.000260  
+##       0.0053962       -0.0003282  
 ## 
 ## Degrees of Freedom: 622 Total (i.e. Null);  613 Residual
 ## Null Deviance:       829.6 
-## Residual Deviance: 522.8     AIC: 542.8</code></pre>
+## Residual Deviance: 518.6     AIC: 538.6</code></pre>
 </div>
 <div id="question-8" class="section level3">
 <h3>Question 8</h3>
@@ -1879,7 +1879,7 @@ folds. Describe what you see.</p>
 <pre><code>## # A tibble: 1 x 3
 ##   .metric  .estimator .estimate
 ##   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
-## 1 accuracy binary         0.776</code></pre>
+## 1 accuracy binary         0.799</code></pre>
 <p>we can be seen that the logistic regression model is better than the
 test set. Using the k-fold cross validation does not have very high
 variance nor bias.</p>

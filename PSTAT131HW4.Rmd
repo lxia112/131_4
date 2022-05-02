@@ -2,13 +2,13 @@
 title: "PSTAT131HW4"
 author: "PSTAT 131/231"
 output:
-  pdf_document:
+  word_document:
     toc: yes
   html_document:
     toc: yes
     toc_float: yes
     code_folding: show
-  word_document:
+  pdf_document:
     toc: yes
 ---
 
@@ -36,7 +36,7 @@ Create a recipe for this dataset **identical** to the recipe you used in Homewor
 ### Loading Packages
 
 ```{r}
-set.seed(123)
+set.seed(131)
 
 library(tidymodels)
 library(tidyverse)
@@ -175,19 +175,19 @@ Decide which of the 3 fitted models has performed the best. Explain why. *(Note:
 collect_metrics(log_fit)
 ```
 
-The logistic regression has an accuracy of 0.824 and a standard error of 0.0157.
+The logistic regression has an accuracy of 0.8089350 and a standard error of 0.0145.
 
 ```{r}
 collect_metrics(lda_fit)
 ```
 
-The logistic regression has an accuracy of 0.804 and a standard error of 0.0192.
+The logistic regression has an accuracy of 0.7995136 and a standard error of 0.01826695.
 
 ```{r}
 collect_metrics(qda_fit)
 ```
 
-The logistic regression has an accuracy of 0.766 and a standard error of 0.0209.
+The logistic regression has an accuracy of 0.7850486 and a standard error of 0.01310639.
 
 So, the logistic regression model performed the best because it had the highest accuracy and smallest standard error.
 
